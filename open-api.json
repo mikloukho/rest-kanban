@@ -1,0 +1,196 @@
+{
+    "openapi": "3.0.2",
+    "info": {
+        "title": "Laravel",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http:\/\/localhost:8000"
+        }
+    ],
+    "paths": {
+        "\/v1\/kanban\/export": {
+            "get": {
+                "summary": "Export kanban."
+            }
+        },
+        "\/v1\/kanban": {
+            "get": {
+                "summary": "Display a listing of the resource."
+            }
+        },
+        "\/v1\/sections": {
+            "post": {
+                "summary": "Store a newly created section in storage."
+            }
+        },
+        "\/v1\/sections\/{section}": {
+            "get": {
+                "summary": "Display the specified section.",
+                "parameters": [
+                    {
+                        "name": "section",
+                        "in": "path",
+                        "description": "Section ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Update the specified section in storage.",
+                "parameters": [
+                    {
+                        "name": "section",
+                        "in": "path",
+                        "description": "Section ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Remove the specified resource from storage.",
+                "parameters": [
+                    {
+                        "name": "section",
+                        "in": "path",
+                        "description": "Section ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            }
+        },
+        "\/v1\/sections\/{section}\/notes": {
+            "post": {
+                "summary": "Store a newly created note in storage.",
+                "parameters": [
+                    {
+                        "name": "section",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            }
+        },
+        "\/v1\/sections\/{section}\/notes\/{note}\/move": {
+            "put": {
+                "summary": "Move the specified note to other section.",
+                "parameters": [
+                    {
+                        "name": "section",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "note",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            }
+        },
+        "\/v1\/notes\/{note}": {
+            "get": {
+                "summary": "Display the specified note.",
+                "parameters": [
+                    {
+                        "name": "note",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Update the specified note in storage.",
+                "parameters": [
+                    {
+                        "name": "note",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Remove the specified note from storage.",
+                "parameters": [
+                    {
+                        "name": "note",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            }
+        },
+        "\/v1\/comments\/{comment}": {
+            "get": {
+                "summary": "Display the specified comment.",
+                "parameters": [
+                    {
+                        "name": "comment",
+                        "in": "path",
+                        "description": "Comment ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Update the specified comment in storage.",
+                "parameters": [
+                    {
+                        "name": "comment",
+                        "in": "path",
+                        "description": "Comment ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Remove the specified comment from storage.",
+                "parameters": [
+                    {
+                        "name": "comment",
+                        "in": "path",
+                        "description": "Comment ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
